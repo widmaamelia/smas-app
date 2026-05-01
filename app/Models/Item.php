@@ -20,25 +20,19 @@ class Item extends Model
         'description',
     ];
 
-    /**
-     * Relasi: Item ke Category
-     */
+    
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
     }
 
-    /**
-     * Accessor: gabungan item_code + item_name
-     */
+    
     public function getFullNameAttribute()
     {
         return $this->item_code . ' - ' . $this->item_name;
     }
 
-    /**
-     * Mutator: item_code otomatis uppercase
-     */
+   
     public function setItemCodeAttribute($value)
     {
         $this->attributes['item_code'] = strtoupper($value);

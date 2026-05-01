@@ -11,9 +11,7 @@ class Category extends Model
     use SoftDeletes;
     protected $fillable = ['name']; 
 
-    /**
-     * Relasi hasMany: Category ke Item
-     */
+    
     public function items(): HasMany
     {
         return $this->hasMany(Item::class);
