@@ -82,7 +82,7 @@ Terminal 2:
 ```bash
 npm run dev
 ```
-buka terminal untu bikin storage link :
+10.buka terminal untu bikin storage link :
 ``` bash
 php artisan storage:link
 
